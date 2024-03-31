@@ -1,8 +1,3 @@
----drop schema "tagd" cascade;
-create schema "tagd";
-
-set search_path to "tagd";
-
 /* 
 Create the tables r1(a,b,c) r2(d,e,f) r3(g,h,i)
 all the fields are numeric with a, b and g as primary keys

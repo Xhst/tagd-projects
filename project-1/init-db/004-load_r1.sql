@@ -1,4 +1,3 @@
-set search_path to "tagd";
 delete from r1;
 
 create or replace function load_r1(table_size integer, b_max integer, c_max integer) 
