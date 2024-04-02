@@ -14,4 +14,4 @@ begin
 end;
 
 $$ language plpgsql;
-select load_r1(1000000, 100, 2000000);
+select load_r1(1000000, 100, 500000);
