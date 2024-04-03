@@ -1,0 +1,25 @@
+OPERATION 1:
+time: ~ 19s
+Affected rows: 490167
+
+r1 --> hash -->
+r2 -----------> hash inner join 
+
+_____________________________
+OPERATION 2:
+time: ~ 4s
+Affected rows: 10122
+
+r1 -------> 
+r2 pkey --> nested loop inner join --> gather
+
+_____________________________
+OPERATION 3:
+time: ~ 80ms
+Affected rows: 1
+
+r1 pkey -->
+r2 pkey --> nested loop inner join
+r3 pkey --------------------------> nested loop inner join
+
+_____________________________
