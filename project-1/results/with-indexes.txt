@@ -1,0 +1,15 @@
+OPERATION 1:
+time: ~ 4.3s
+Affected rows: 189621
+
+_____________________________
+OPERATION 2:
+time: ~ 1.8s
+Affected rows: 10122
+
+_____________________________
+OPERATION 3:
+time: ~ 80ms
+Affected rows: 1
+
+_____________________________
