@@ -1,7 +1,7 @@
 /* Operation 1 */
 SELECT * 
 FROM R1, R2 
-WHERE C=D AND B<50
+WHERE C=D AND B<20
 
 /* Operation 2 */
 SELECT * 

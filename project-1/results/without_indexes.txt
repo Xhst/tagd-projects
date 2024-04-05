@@ -1,6 +1,6 @@
 OPERATION 1:
-time: ~ 19s
-Affected rows: 490167
+time: ~ 5s
+Affected rows: 189621
 
 r1 --> hash -->
 r2 -----------> hash inner join 
