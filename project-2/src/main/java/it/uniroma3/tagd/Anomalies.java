@@ -30,7 +30,6 @@ public class Anomalies {
 
             System.out.println();
             System.out.println("Testing " + isolationLevel.getName() + " isolation level with " + anomaly.getName() + " anomaly");
-            //System.out.println("Initial state: " + getBankAccountString(connection3));
 
             switch (anomaly) {
                 case LOST_UPDATE:
