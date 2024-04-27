@@ -96,7 +96,7 @@ public class Anomalies {
 
                 statement.executeUpdate("UPDATE bank_account SET balance = balance + 100 WHERE id = 1");
 
-                Thread.sleep(2000);
+                Thread.sleep(1000);
 
                 connection1.commit();
                 System.out.println("Operation 1 committed");
