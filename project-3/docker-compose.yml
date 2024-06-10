@@ -9,7 +9,8 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: benchbase
     volumes:
-      - ./init-db:/docker-entrypoint-initdb.d/
+      - ./scripts/init-db:/docker-entrypoint-initdb.d/
+      - ./scripts/benchbase:/benchbase-scripts/
     ports:
       - "5432:5432"
     restart: unless-stopped
