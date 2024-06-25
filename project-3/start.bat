@@ -10,4 +10,4 @@ docker exec -it tagd-postgres chmod 777 /root/benchbase-2023/target/benchbase-po
 docker exec -it tagd-postgres /benchbase-scripts/prep-benchbase.sh
 
 :: connect to container
-docker exec -it -w /root/benchbase-2023/target/benchbase-postgres tagd-postgres sh
+docker exec -it -w /root/benchbase-2023/target/benchbase-postgres tagd-postgres bash
