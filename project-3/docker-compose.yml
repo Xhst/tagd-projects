@@ -10,6 +10,7 @@ services:
       POSTGRES_DB: benchbase
     volumes:
       - pgdata:/var/lib/postgresql/data
+      - ./samples:/root/samples/
       - ./scripts/init-db:/docker-entrypoint-initdb.d/
       - ./scripts/benchbase:/benchbase-scripts/
     ports:
