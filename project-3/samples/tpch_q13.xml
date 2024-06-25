@@ -27,7 +27,7 @@
     <transactiontypes>
         <transactiontype>
             <name>Q13</name>
-            <id>13</id>
+            <id>1</id>
         </transactiontype>
     </transactiontypes>
 </parameters>
