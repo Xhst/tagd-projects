@@ -9,3 +9,5 @@ Experiment with concurrency control management in one or more DBMSs.
 
 ## Project 3
 The project involves performance analysis and sizing of a DBMS.
+
+In the pg_stats results we have to filter our benchmark queries and also delete the row regarding a "DROP" query. Then we analyze the remaining rows in terms of execution time and metrics on blocks.
