@@ -3,7 +3,7 @@ version: "3.9"
 services:
   tagd-postgres:
     container_name: tagd-postgres
-    image: chmod84/tagd
+    image: chmod84/tagd:latest
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: password
