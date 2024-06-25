@@ -4,6 +4,9 @@
 cd /root/benchbase-2023/target
 tar xvzf benchbase-postgres.tgz
 
+# move query files to the correct directory
+mv /root/benchbase-2023/queries /root/benchbase-2023/target/benchbase-postgres
+
 # change scale factor
 FILE="/root/benchbase-2023/target/benchbase-postgres/config/postgres/sample_tpch_config.xml"
 SCALE_FACTOR=2
