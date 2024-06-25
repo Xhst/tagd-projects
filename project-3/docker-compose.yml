@@ -9,6 +9,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_DB: benchbase
     volumes:
+      - pgdata:/var/lib/postgresql/data
       - ./scripts/init-db:/docker-entrypoint-initdb.d/
       - ./scripts/benchbase:/benchbase-scripts/
     ports:
@@ -30,3 +31,4 @@ services:
 
 volumes:
   pgadmin:
+  pgdata:
