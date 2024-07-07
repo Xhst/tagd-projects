@@ -17,7 +17,7 @@
     <terminals>3</terminals>
     <works>
         <work>
-            <time>60</time>
+            <time>180</time>
             <serial>false</serial>
             <rate>unlimited</rate>
             <weights>1</weights>
