@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
-<archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="question_4_sim_raid_5.jsimg" timestamp="Wed Jul 10 23:19:01 CEST 2024" xsi:noNamespaceSchemaLocation="Archive.xsd">
+<archive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="question_4_sim_raid_5.jsimg" timestamp="Thu Jul 11 13:58:41 CEST 2024" xsi:noNamespaceSchemaLocation="Archive.xsd">
     <sim disableStatisticStop="false" logDecimalSeparator="," logDelimiter=";" logPath="C:\Users\Carlo\JMT" logReplaceMode="0" maxEvents="-1" maxSamples="1000000" name="question_4_sim_raid_5.jsimg" polling="1.0" xsi:noNamespaceSchemaLocation="SIMmodeldefinition.xsd">
         <userClass customers="10" name="CPU intensive" priority="0" referenceSource="RefStation" softDeadline="0.0" type="closed"/>
         <userClass customers="10" name="Disk intensive" priority="0" referenceSource="RefStation" softDeadline="0.0" type="closed"/>
@@ -202,6 +202,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>CPU - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>22</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -861,6 +894,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 0 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -978,6 +1044,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 1 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -1067,6 +1166,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 2 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -1158,6 +1290,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 3 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -1247,6 +1412,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 4 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -1338,6 +1536,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 5 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -1427,6 +1658,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 6 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -1518,6 +1782,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 7 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -1607,6 +1904,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 8 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -1698,6 +2028,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 9 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -1787,6 +2150,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 10 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -1878,6 +2274,39 @@
                         <value>1.0</value>
                     </subParameter>
                 </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 11 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
+                </parameter>
             </section>
             <section className="Router">
                 <parameter array="true" classPath="jmt.engine.NetStrategies.RoutingStrategy" name="RoutingStrategy">
@@ -1967,6 +2396,39 @@
                     <subParameter classPath="java.lang.Double" name="serviceWeight">
                         <value>1.0</value>
                     </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="classParallelism">
+                    <refClass>CPU intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                    <refClass>Disk intensive</refClass>
+                    <subParameter classPath="java.lang.Integer" name="serverParallelism">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.String" name="serverNames">
+                    <subParameter classPath="java.lang.String" name="serverTypesNames">
+                        <value>Storage Device 12 - Server Type 1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Integer" name="serversPerServerType">
+                    <subParameter classPath="java.lang.Integer" name="serverTypesNumOfServers">
+                        <value>1</value>
+                    </subParameter>
+                </parameter>
+                <parameter array="true" classPath="java.lang.Object" name="serverCompatibilities">
+                    <subParameter array="true" classPath="java.lang.Boolean" name="serverTypesCompatibilities">
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                        <subParameter classPath="java.lang.Boolean" name="compatibilities">
+                            <value>true</value>
+                        </subParameter>
+                    </subParameter>
+                </parameter>
+                <parameter classPath="java.lang.String" name="schedulingPolicy">
+                    <value>ALIS (Assign Longest Idle Server)</value>
                 </parameter>
             </section>
             <section className="Router">
@@ -2081,37 +2543,36 @@
             <position angle="0.0" rotate="false" x="390.0" y="1200.0"/>
         </station>
     </jmodel>
-    <results elapsedTime="3161" logDecimalSeparator="," logDelimiter=";" pollingInterval="1.0" xsi:noNamespaceSchemaLocation="Results.xsd">
-        <measure alpha="0.99" analyzedSamples="81920" discardedSamples="11805" finalValue="1.09137976349531" name="System Response Time" nodeType="" precision="0.03" referenceClass="" referenceStation="" state="1" type="15">
-            <sample lastIntervalAvgValue="1.0900405204256376" meanValue="1.0900405204256376" simulationTime="681.5029927946658"/>
-            <sample lastIntervalAvgValue="1.089400146186933" lowerBound="1.0440699579241157" meanValue="1.0784101411000748" simulationTime="1982.9455840707162" upperBound="1.112750324276034"/>
-            <sample lastIntervalAvgValue="1.0720435899667813" lowerBound="1.0474732139149083" meanValue="1.0804033750543143" simulationTime="3865.7664374931915" upperBound="1.1133335361937202"/>
-            <sample lastIntervalAvgValue="1.1117818150143473" lowerBound="1.0671679959805107" meanValue="1.09137976349531" simulationTime="5101.586615645827" upperBound="1.1155915310101092"/>
+    <results elapsedTime="3438" logDecimalSeparator="," logDelimiter=";" pollingInterval="1.0" xsi:noNamespaceSchemaLocation="Results.xsd">
+        <measure alpha="0.99" analyzedSamples="40960" discardedSamples="40" finalValue="1.0809967732885661" name="System Response Time" nodeType="" precision="0.03" referenceClass="" referenceStation="" state="1" type="15">
+            <sample lastIntervalAvgValue="1.0976701253468544" lowerBound="0.9221332198837475" meanValue="1.0982925748918173" simulationTime="498.76495972258346" upperBound="1.274451929899887"/>
+            <sample lastIntervalAvgValue="1.0719690499634047" lowerBound="1.0195181588072495" meanValue="1.0645678504083536" simulationTime="1472.6285206634775" upperBound="1.1096175420094576"/>
+            <sample lastIntervalAvgValue="1.0884040630282468" lowerBound="1.0520291636620955" meanValue="1.0809967732885661" simulationTime="2222.51750961155" upperBound="1.1099643829150367"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="40960" discardedSamples="25" finalValue="18.349370842445424" name="System Throughput" nodeType="" precision="0.03" referenceClass="" referenceStation="" state="1" type="16">
-            <sample lastIntervalAvgValue="18.309530745904695" lowerBound="17.38357786965344" meanValue="18.318043206244162" simulationTime="681.5029927946658" upperBound="19.358681500620232"/>
-            <sample lastIntervalAvgValue="18.351174427588834" lowerBound="17.62912474815274" meanValue="18.509848107635605" simulationTime="1982.9455840707162" upperBound="19.48319805492685"/>
-            <sample lastIntervalAvgValue="18.408080489279367" lowerBound="17.899164320649238" meanValue="18.349370842445424" simulationTime="2234.1396182717813" upperBound="18.82280922881534"/>
+        <measure alpha="0.99" analyzedSamples="71680" discardedSamples="1055" finalValue="18.531737209495024" name="System Throughput" nodeType="" precision="0.03" referenceClass="" referenceStation="" state="1" type="16">
+            <sample lastIntervalAvgValue="18.174834431764776" lowerBound="16.579472394820602" meanValue="18.181463026177383" simulationTime="498.76657936188906" upperBound="20.126151318393998"/>
+            <sample lastIntervalAvgValue="18.641245981680697" lowerBound="18.088101124383638" meanValue="18.902252417956543" simulationTime="1472.6285206634775" upperBound="19.793148443952386"/>
+            <sample lastIntervalAvgValue="18.745410417583443" lowerBound="18.008176175165453" meanValue="18.57110039002849" simulationTime="2806.3416506010717" upperBound="19.17035353523891"/>
+            <sample lastIntervalAvgValue="18.236099596050124" lowerBound="18.10417465325306" meanValue="18.531737209495024" simulationTime="3931.3080882949894" upperBound="18.979983564023314"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="17920" discardedSamples="4270" finalValue="0.6689048126874004" name="CPU_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="CPU" state="1" type="6">
-            <sample lastIntervalAvgValue="0.6629265277096804" meanValue="0.6629265277096804" simulationTime="681.5029927946658"/>
-            <sample lastIntervalAvgValue="0.6712309204971536" lowerBound="0.6550504475189161" meanValue="0.6689048126874004" simulationTime="792.3458138152149" upperBound="0.6827591778558848"/>
+        <measure alpha="0.99" analyzedSamples="20480" discardedSamples="10120" finalValue="0.666610016909931" name="CPU_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="CPU" state="1" type="6">
+            <sample lastIntervalAvgValue="0.6743229472265654" meanValue="0.6743229472265654" simulationTime="498.76657936188906"/>
+            <sample lastIntervalAvgValue="0.667135562045252" lowerBound="0.6496911804439377" meanValue="0.666610016909931" simulationTime="1095.3746917294138" upperBound="0.6835288533759244"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="184320" discardedSamples="650" finalValue="0.6601984976203648" name="Storage Device 0_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="Storage Device 0" state="1" type="6">
-            <sample lastIntervalAvgValue="0.6560419018988671" lowerBound="0.6040649232500667" meanValue="0.6538785473817935" simulationTime="681.4928978775248" upperBound="0.7036921715135204"/>
-            <sample lastIntervalAvgValue="0.6632658928067088" lowerBound="0.6395141289514534" meanValue="0.661873861962494" simulationTime="1982.9494255107961" upperBound="0.6842335949735345"/>
-            <sample lastIntervalAvgValue="0.6591194255134327" lowerBound="0.6367243994448709" meanValue="0.6585545531910161" simulationTime="3865.8534032043353" upperBound="0.6803847069371612"/>
-            <sample lastIntervalAvgValue="0.6617848469553731" lowerBound="0.6479274227059467" meanValue="0.6601984976203648" simulationTime="5105.374687744315" upperBound="0.6724695725347828"/>
+        <measure alpha="0.99" analyzedSamples="92160" discardedSamples="1380" finalValue="0.6621135560186954" name="Storage Device 0_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="Storage Device 0" state="1" type="6">
+            <sample lastIntervalAvgValue="0.6453786925898044" lowerBound="0.5768183431512961" meanValue="0.6466391217457826" simulationTime="498.75904362745115" upperBound="0.7164599003402692"/>
+            <sample lastIntervalAvgValue="0.6649913110909663" lowerBound="0.6287210715611256" meanValue="0.6573529189376949" simulationTime="1472.6145279166442" upperBound="0.6859847663142642"/>
+            <sample lastIntervalAvgValue="0.6611101496808476" lowerBound="0.6461620806482904" meanValue="0.6621135560186954" simulationTime="2575.2305116057714" upperBound="0.6780650313891003"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="102400" discardedSamples="1460" finalValue="0.6637949535414162" name="Storage Device 6_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="Storage Device 6" state="1" type="6">
-            <sample lastIntervalAvgValue="0.6764891772389149" lowerBound="0.6617267025595046" meanValue="0.6979274125318086" simulationTime="681.4426902632147" upperBound="0.7341281225041125"/>
-            <sample lastIntervalAvgValue="0.6577501529409701" lowerBound="0.6331413682071292" meanValue="0.6560070303774271" simulationTime="1982.9459275784507" upperBound="0.6788726925477251"/>
-            <sample lastIntervalAvgValue="0.667152253541912" lowerBound="0.647652553737007" meanValue="0.6637949535414162" simulationTime="2850.889196487737" upperBound="0.6799373533458253"/>
+        <measure alpha="0.99" analyzedSamples="71680" discardedSamples="165" finalValue="0.6636569073108236" name="Storage Device 6_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="Storage Device 6" state="1" type="6">
+            <sample lastIntervalAvgValue="0.6535086034020023" lowerBound="0.5671648709408144" meanValue="0.6361762302757394" simulationTime="498.73807144498124" upperBound="0.7051875896106645"/>
+            <sample lastIntervalAvgValue="0.6723896568791321" lowerBound="0.6277088685974572" meanValue="0.660786991953401" simulationTime="1472.5274810073422" upperBound="0.6938651153093447"/>
+            <sample lastIntervalAvgValue="0.6508896771833413" lowerBound="0.6451585440101814" meanValue="0.6636569073108236" simulationTime="1984.387841803859" upperBound="0.6821552706114659"/>
         </measure>
-        <measure alpha="0.99" analyzedSamples="102400" discardedSamples="190" finalValue="0.6594885622440911" name="Storage Device 12_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="Storage Device 12" state="1" type="6">
-            <sample lastIntervalAvgValue="0.6649289622753467" lowerBound="0.6123858458988892" meanValue="0.665600399136989" simulationTime="681.4499636535112" upperBound="0.7188149523750887"/>
-            <sample lastIntervalAvgValue="0.6704985435815018" lowerBound="0.6499822528254062" meanValue="0.6724250871812079" simulationTime="1982.946016306479" upperBound="0.6948679215370095"/>
-            <sample lastIntervalAvgValue="0.6505576054942016" lowerBound="0.6423880143205339" meanValue="0.6594885622440911" simulationTime="2814.086928114501" upperBound="0.6765891101676483"/>
+        <measure alpha="0.99" analyzedSamples="81920" discardedSamples="0" finalValue="0.6737194822495937" name="Storage Device 12_Utilization" nodeType="station" precision="0.03" referenceClass="" referenceStation="Storage Device 12" state="1" type="6">
+            <sample lastIntervalAvgValue="0.6715437713480176" lowerBound="0.5896222860420056" meanValue="0.6643552986436267" simulationTime="498.70494160888904" upperBound="0.7390883112452479"/>
+            <sample lastIntervalAvgValue="0.6692938566357204" lowerBound="0.6525621313198293" meanValue="0.6732791105794361" simulationTime="1472.5278657593335" upperBound="0.6939960898390429"/>
+            <sample lastIntervalAvgValue="0.6770377302809256" lowerBound="0.6547116913518193" meanValue="0.6737194822495937" simulationTime="2268.3047393091915" upperBound="0.692727273147368"/>
         </measure>
     </results>
 </archive>
